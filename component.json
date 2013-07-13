@@ -1,0 +1,17 @@
+{
+  "name": "extensible",
+  "repo": "yields/extensible",
+  "description": "extensible constructors.",
+  "version": "0.0.1",
+  "keywords": ["extensible", "extend"],
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": ["index.js"],
+  "dependencies": {
+    "component/inherit": "*"
+  },
+  "development": {
+    "visionmedia/mocha": "*",
+    "component/assert": "*"
+  }
+}
