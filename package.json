@@ -1,0 +1,9 @@
+{
+  "name": "extensible",
+  "version": "0.0.1",
+  "dependencies": {
+    "inherit": "http://github.com/nathan7/inherit/tarball/f1a75b4844"
+  },
+  "repository": "git://github.com/yields/extensible.git",
+  "files": ["index.js"]
+}
