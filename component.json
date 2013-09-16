@@ -2,7 +2,7 @@
   "name": "extensible",
   "repo": "yields/extensible",
   "description": "extensible constructors.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "keywords": ["extensible", "extend"],
   "license": "MIT",
   "main": "index.js",

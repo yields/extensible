@@ -12,16 +12,29 @@
 ## Example
 
 ```js
-function A(){}
-A.prototype.name = 'a';
-function B(){}
-extensible(A);
-A.extend(B);
+function View(){}
+function FormView(){}
+function TabView(){}
+function ComplexFormView(){}
 
-var b = new B;
-assert('a' == b.name);
-assert(b.constructor == B);
+// => Make the view extensible
+
+extensible(View);
+
+// => FormView extends View
+
+View.extend(FormView);
+
+// => ComplexFormView extends FormView
+
+FormView.extend(ComplexFormView);
 ```
+
+## API
+
+### extensible(Constructor)
+
+Add recursive `.extend(Other)` method to `Constructor`.
 
 ## component/inherit
 
