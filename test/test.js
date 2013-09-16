@@ -23,3 +23,12 @@ describe('A.extend(B)', function(){
     assert(b.constructor == B);
   })
 })
+
+describe('A.extend(B, final)', function(){
+  it('should not make `B` extensible', function(){
+    var A = extensible(function(){});
+    var B = A.extend(function(){}, 'final');
+    assert(new B instanceof A);
+    assert(B.extend === undefined);
+  })
+})

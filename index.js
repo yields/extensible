@@ -3,7 +3,7 @@
  * dependencies
  */
 
-var extend = require('inherit');
+var inherit = require('inherit');
 
 /**
  * Export `extensible`
@@ -12,14 +12,28 @@ var extend = require('inherit');
 module.exports = extensible;
 
 /**
- * Make the given `A` extensbile.
+ * Make the given `A` extensible.
  *
  * @param {Function} A
+ * @return {A}
  */
 
 function extensible(A){
-  A.extend = function(B){
-    extensible(B);
-    extend(B, A);
-  };
+  A.extend = extend;
+  return A;
+};
+
+/**
+ * make `B` inherit from `this`. Unless `final`,
+ * `B` will also be made extensible.
+ *
+ * @param {Function} B
+ * @param {Boolean} [final]
+ * @return {B}
+ */
+
+function extend(B, final){
+  !final && extensible(B);
+  inherit(B, this);
+  return B
 };
