@@ -1,4 +1,3 @@
-
 # extensible
 
   extensible constructors.
@@ -40,7 +39,7 @@ Add recursive `.extend(Other)` method to `Constructor`.
 
 extensible uses component/inherit to do the inheritance,
 but it's different from inherit since it adds `.extend()` static
-method to you're constructor.
+method to your constructor.
 
 this means you can have a single `extensible(View)` and do `View.extend(OtherView)`
 instead of installing `component/inherit` on each view component.
